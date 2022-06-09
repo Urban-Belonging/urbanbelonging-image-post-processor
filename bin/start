@@ -1,0 +1,8 @@
+#! /bin/sh
+
+source ./bin/common
+
+export DOCKERHOST=`/sbin/ip route|awk '/default/ { print $3 }'`
+export DEBUG=""
+
+node .
